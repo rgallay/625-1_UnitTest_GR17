@@ -82,12 +82,14 @@ namespace ImageEdgeDetection
         private void BandWFilterButton_Click(object sender, EventArgs e)
         {
             picPreview.Image = ImageFilters.BlackWhite(new Bitmap(picPreview.Image));
+            previewBitmap = (Bitmap)picPreview.Image;
             groupBox3.Enabled = true;
         }
 
         private void RainbowFilterButton_Click(object sender, EventArgs e)
         {
             picPreview.Image = ImageFilters.RainbowFilter(new Bitmap(picPreview.Image));
+            previewBitmap = (Bitmap)picPreview.Image;
             groupBox3.Enabled = true;
         }
 
@@ -198,7 +200,7 @@ namespace ImageEdgeDetection
 
             if (picPreview.Image.Size.Height > 0)
             {
-                Bitmap newbitmap = new Bitmap(picPreview.Image);
+                Bitmap newbitmap = new Bitmap(previewBitmap);
                 BitmapData newbitmapData = new BitmapData();
                 newbitmapData = newbitmap.LockBits(new Rectangle(0, 0, newbitmap.Width, newbitmap.Height), ImageLockMode.ReadOnly, PixelFormat.Format32bppPArgb);
 

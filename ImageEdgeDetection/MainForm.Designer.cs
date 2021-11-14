@@ -88,7 +88,7 @@
             // 
             // BandWFilterButton
             // 
-            this.BandWFilterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BandWFilterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BandWFilterButton.Location = new System.Drawing.Point(34, 75);
             this.BandWFilterButton.Name = "BandWFilterButton";
             this.BandWFilterButton.Size = new System.Drawing.Size(231, 46);
@@ -99,7 +99,7 @@
             // 
             // RainbowFilterButton
             // 
-            this.RainbowFilterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RainbowFilterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RainbowFilterButton.Location = new System.Drawing.Point(315, 75);
             this.RainbowFilterButton.Name = "RainbowFilterButton";
             this.RainbowFilterButton.Size = new System.Drawing.Size(240, 46);
@@ -148,8 +148,8 @@
             // 
             // EdgeDetectionButton
             // 
-            this.EdgeDetectionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EdgeDetectionButton.Location = new System.Drawing.Point(240, 170);
+            this.EdgeDetectionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EdgeDetectionButton.Location = new System.Drawing.Point(175, 175);
             this.EdgeDetectionButton.Name = "EdgeDetectionButton";
             this.EdgeDetectionButton.Size = new System.Drawing.Size(143, 40);
             this.EdgeDetectionButton.TabIndex = 25;
