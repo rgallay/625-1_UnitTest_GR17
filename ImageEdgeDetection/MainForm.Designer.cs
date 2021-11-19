@@ -114,6 +114,7 @@
             this.listBoxXFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxXFilter.FormattingEnabled = true;
             this.listBoxXFilter.Items.AddRange(new object[] {
+            "None",
             "Laplacian3x3",
             "Laplacian5x5",
             "Sobel3x3Horizontal",
@@ -126,6 +127,7 @@
             this.listBoxXFilter.Name = "listBoxXFilter";
             this.listBoxXFilter.Size = new System.Drawing.Size(288, 37);
             this.listBoxXFilter.TabIndex = 23;
+            this.listBoxXFilter.SelectedIndexChanged += new System.EventHandler(this.listBoxXFilter_SelectedIndexChanged);
             // 
             // listBoxYFilter
             // 
@@ -133,6 +135,7 @@
             this.listBoxYFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxYFilter.FormattingEnabled = true;
             this.listBoxYFilter.Items.AddRange(new object[] {
+            "None",
             "Laplacian3x3",
             "Laplacian5x5",
             "Sobel3x3Horizontal",
@@ -145,6 +148,7 @@
             this.listBoxYFilter.Name = "listBoxYFilter";
             this.listBoxYFilter.Size = new System.Drawing.Size(288, 37);
             this.listBoxYFilter.TabIndex = 24;
+            this.listBoxYFilter.SelectedIndexChanged += new System.EventHandler(this.listBoxYFilter_SelectedIndexChanged);
             // 
             // EdgeDetectionButton
             // 
