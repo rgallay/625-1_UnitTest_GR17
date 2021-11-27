@@ -39,6 +39,8 @@ namespace ImageEdgeDetection
                 picPreview.Image = previewBitmap;
 
                 groupBox2.Enabled = true;
+                groupBox3.Enabled = false;
+                groupBox4.Enabled = false;
             }
         }
 
