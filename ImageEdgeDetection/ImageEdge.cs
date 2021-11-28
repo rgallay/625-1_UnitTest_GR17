@@ -12,93 +12,9 @@ namespace ImageEdgeDetection
     {
         public static Bitmap filter(string xfilter, string yfilter, Bitmap previewBitmap)
         {
-            double[,] xFilterMatrix;
-            double[,] yFilterMatrix;
-            switch (xfilter)
-            {
-                case "Laplacian3x3":
-                    xFilterMatrix = Matrix.Laplacian3x3;
-                    break;
-                case "Laplacian5x5":
-                    xFilterMatrix = Matrix.Laplacian5x5;
-                    break;
-                case "LaplacianOfGaussian":
-                    xFilterMatrix = Matrix.LaplacianOfGaussian;
-                    break;
-                case "Gaussian3x3":
-                    xFilterMatrix = Matrix.Gaussian3x3;
-                    break;
-                case "Gaussian5x5Type1":
-                    xFilterMatrix = Matrix.Gaussian5x5Type1;
-                    break;
-                case "Gaussian5x5Type2":
-                    xFilterMatrix = Matrix.Gaussian5x5Type2;
-                    break;
-                case "Sobel3x3Horizontal":
-                    xFilterMatrix = Matrix.Sobel3x3Horizontal;
-                    break;
-                case "Sobel3x3Vertical":
-                    xFilterMatrix = Matrix.Sobel3x3Vertical;
-                    break;
-                case "Prewitt3x3Horizontal":
-                    xFilterMatrix = Matrix.Prewitt3x3Horizontal;
-                    break;
-                case "Prewitt3x3Vertical":
-                    xFilterMatrix = Matrix.Prewitt3x3Vertical;
-                    break;
-                case "Kirsch3x3Horizontal":
-                    xFilterMatrix = Matrix.Kirsch3x3Horizontal;
-                    break;
-                case "Kirsch3x3Vertical":
-                    xFilterMatrix = Matrix.Kirsch3x3Vertical;
-                    break;
-                default:
-                    xFilterMatrix = Matrix.Laplacian3x3;
-                    break;
-            }
-
-            switch (yfilter)
-            {
-                case "Laplacian3x3":
-                    yFilterMatrix = Matrix.Laplacian3x3;
-                    break;
-                case "Laplacian5x5":
-                    yFilterMatrix = Matrix.Laplacian5x5;
-                    break;
-                case "LaplacianOfGaussian":
-                    yFilterMatrix = Matrix.LaplacianOfGaussian;
-                    break;
-                case "Gaussian3x3":
-                    yFilterMatrix = Matrix.Gaussian3x3;
-                    break;
-                case "Gaussian5x5Type1":
-                    yFilterMatrix = Matrix.Gaussian5x5Type1;
-                    break;
-                case "Gaussian5x5Type2":
-                    yFilterMatrix = Matrix.Gaussian5x5Type2;
-                    break;
-                case "Sobel3x3Horizontal":
-                    yFilterMatrix = Matrix.Sobel3x3Horizontal;
-                    break;
-                case "Sobel3x3Vertical":
-                    yFilterMatrix = Matrix.Sobel3x3Vertical;
-                    break;
-                case "Prewitt3x3Horizontal":
-                    yFilterMatrix = Matrix.Prewitt3x3Horizontal;
-                    break;
-                case "Prewitt3x3Vertical":
-                    yFilterMatrix = Matrix.Prewitt3x3Vertical;
-                    break;
-                case "Kirsch3x3Horizontal":
-                    yFilterMatrix = Matrix.Kirsch3x3Horizontal;
-                    break;
-                case "Kirsch3x3Vertical":
-                    yFilterMatrix = Matrix.Kirsch3x3Vertical;
-                    break;
-                default:
-                    yFilterMatrix = Matrix.Laplacian3x3;
-                    break;
-            }
+            double[,] xFilterMatrix = selectEdge(xfilter);
+            double[,] yFilterMatrix = selectEdge(yfilter) ;
+            
 
             Bitmap newbitmap = new Bitmap(previewBitmap);
             BitmapData newbitmapData = new BitmapData();
@@ -214,6 +130,55 @@ namespace ImageEdgeDetection
             Marshal.Copy(resultbuff, 0, resultData.Scan0, resultbuff.Length);
             resultbitmap.UnlockBits(resultData);
             return resultbitmap;
+        }
+
+        public static double[,] selectEdge(String xyfilter)
+        {
+            double[,] FilterMatrix;
+
+            switch (xyfilter)
+            {
+                case "Laplacian3x3":
+                    FilterMatrix = Matrix.Laplacian3x3;
+                break;
+                case "Laplacian5x5":
+                    FilterMatrix = Matrix.Laplacian5x5;
+                break;
+                case "LaplacianOfGaussian":
+                    FilterMatrix = Matrix.LaplacianOfGaussian;
+                break;
+                case "Gaussian3x3":
+                    FilterMatrix = Matrix.Gaussian3x3;
+                break;
+                case "Gaussian5x5Type1":
+                    FilterMatrix = Matrix.Gaussian5x5Type1;
+                break;
+                case "Gaussian5x5Type2":
+                    FilterMatrix = Matrix.Gaussian5x5Type2;
+                break;
+                case "Sobel3x3Horizontal":
+                    FilterMatrix = Matrix.Sobel3x3Horizontal;
+                break;
+                case "Sobel3x3Vertical":
+                    FilterMatrix = Matrix.Sobel3x3Vertical;
+                break;
+                case "Prewitt3x3Horizontal":
+                    FilterMatrix = Matrix.Prewitt3x3Horizontal;
+                break;
+                case "Prewitt3x3Vertical":
+                    FilterMatrix = Matrix.Prewitt3x3Vertical;
+                break;
+                case "Kirsch3x3Horizontal":
+                    FilterMatrix = Matrix.Kirsch3x3Horizontal;
+                break;
+                case "Kirsch3x3Vertical":
+                    FilterMatrix = Matrix.Kirsch3x3Vertical;
+                break;
+                default:
+                    FilterMatrix = Matrix.Laplacian3x3;
+                break;
+            }
+            return FilterMatrix;
         }
     }
 }
