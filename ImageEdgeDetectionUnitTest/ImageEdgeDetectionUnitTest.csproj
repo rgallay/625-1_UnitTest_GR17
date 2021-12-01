@@ -65,10 +65,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\discussion_1.png" />
+    <Content Include="Images\discussion_1_bw.png" />
+    <Content Include="Images\discussion_rainbow.png" />
     <Content Include="Images\mario-base.png" />
-    <Content Include="Images\mario-blackwhite.png" />
     <Content Include="Images\mario-laplacian3x3-kirsh3x3vertical.png" />
-    <Content Include="Images\mario-rainbow.png" />
     <Content Include="Images\mario-sobel3x3hori-prewitt3x3hori.png" />
     <Content Include="Images\mario-sobel3x3hori-sobel3x3verti.png" />
   </ItemGroup>

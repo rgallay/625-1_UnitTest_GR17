@@ -14,13 +14,13 @@ namespace ImageEdgeDetectionUnitTest
         public void TestBlackAndWhiteFilter()
         {
             //base
-            Bitmap basePicture = new Bitmap(@"..\\..\\Images\\mario-base.png");
+            Bitmap basePicture = new Bitmap(@"..\\..\\Images\\discussion_1.png");
             string resultImageAfterFilter_REF;
             string resultSavedBitmap_REF;
 
             //action
             Bitmap resultImageAfterFilter = ImageFilters.BlackWhite(basePicture);
-            Bitmap resultSavedBitmap = new Bitmap(@"..\\..\\Images\\mario-blackwhite.png");
+            Bitmap resultSavedBitmap = new Bitmap(@"..\\..\\Images\\discussion_1_bw.png");
 
             //Assert on width/height and pixels
             if (resultImageAfterFilter.Width == resultSavedBitmap.Width && resultImageAfterFilter.Height == resultSavedBitmap.Height)
@@ -42,13 +42,13 @@ namespace ImageEdgeDetectionUnitTest
         public void TestRainbowFilter()
         {
             //base
-            Bitmap basePicture = new Bitmap(@"..\\..\\Images\\mario-base.png");
+            Bitmap basePicture = new Bitmap(@"..\\..\\Images\\discussion_1.png");
             string resultImageAfterFilter_REF;
             string resultSavedBitmap_REF;
 
             //action
             Bitmap resultImageAfterFilter = ImageFilters.RainbowFilter(basePicture);
-            Bitmap resultSavedBitmap = new Bitmap(@"..\\..\\Images\\mario-rainbow.png");
+            Bitmap resultSavedBitmap = new Bitmap(@"..\\..\\Images\\discussion_rainbow.png");
 
             //Assert on width/height and pixels
             if (resultImageAfterFilter.Width == resultSavedBitmap.Width && resultImageAfterFilter.Height == resultSavedBitmap.Height)
