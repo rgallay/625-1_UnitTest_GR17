@@ -22,7 +22,7 @@ namespace ImageEdgeDetectionUnitTest
             Bitmap resultImageAfterFilter = ImageFilters.BlackWhite(basePicture);
             Bitmap resultSavedBitmap = new Bitmap(@"..\\..\\Images\\mario-blackwhite.png");
 
-            //Assert
+            //Assert on width/height and pixels
             if (resultImageAfterFilter.Width == resultSavedBitmap.Width && resultImageAfterFilter.Height == resultSavedBitmap.Height)
             {
                 for (int i = 0; i < resultImageAfterFilter.Width; i++)
@@ -50,7 +50,7 @@ namespace ImageEdgeDetectionUnitTest
             Bitmap resultImageAfterFilter = ImageFilters.RainbowFilter(basePicture);
             Bitmap resultSavedBitmap = new Bitmap(@"..\\..\\Images\\mario-rainbow.png");
 
-            //Assert
+            //Assert on width/height and pixels
             if (resultImageAfterFilter.Width == resultSavedBitmap.Width && resultImageAfterFilter.Height == resultSavedBitmap.Height)
             {
                 for (int i = 0; i < resultImageAfterFilter.Width; i++)
@@ -60,7 +60,7 @@ namespace ImageEdgeDetectionUnitTest
                         resultImageAfterFilter_REF = resultImageAfterFilter.GetPixel(i, j).ToString();
                         resultSavedBitmap_REF = resultSavedBitmap.GetPixel(i, j).ToString();
 
-                        Assert.AreEqual(resultImageAfterFilter_REF, resultSavedBitmap_REF);
+                        Assert.AreEqual(resultImageAfterFilter_REF, resultSavedBitmap_REF); 
                     }
                 }
             }

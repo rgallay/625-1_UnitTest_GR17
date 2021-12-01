@@ -21,7 +21,7 @@ namespace ImageEdgeDetectionUnitTest
             Bitmap resultImageAfterFilter = ImageEdge.filter("Laplacian3x3", "Kirsch3x3Vertical", basePicture);
             Bitmap resultSavedBitmap = new Bitmap(@"..\\..\\Images\\mario-laplacian3x3-kirsh3x3vertical.png");
 
-            //Assert
+            //Assert on width/height and pixels
             if (resultImageAfterFilter.Width == resultSavedBitmap.Width && resultImageAfterFilter.Height == resultSavedBitmap.Height)
             {
                 for (int i = 0; i < resultImageAfterFilter.Width; i++)
@@ -50,7 +50,7 @@ namespace ImageEdgeDetectionUnitTest
             Bitmap resultImageAfterFilter = ImageEdge.filter("Sobel3x3Horizontal", "Prewitt3x3Horizontal", basePicture);
             Bitmap resultSavedBitmap = new Bitmap(@"..\\..\\Images\\mario-sobel3x3hori-prewitt3x3hori.png");
 
-            //Assert
+            //Assert on width/height and pixels
             if (resultImageAfterFilter.Width == resultSavedBitmap.Width && resultImageAfterFilter.Height == resultSavedBitmap.Height)
             {
                 for (int i = 0; i < resultImageAfterFilter.Width; i++)
@@ -79,7 +79,7 @@ namespace ImageEdgeDetectionUnitTest
             Bitmap resultImageAfterFilter = ImageEdge.filter("Sobel3x3Horizontal", "Sobel3x3Vertical", basePicture);
             Bitmap resultSavedBitmap = new Bitmap(@"..\\..\\Images\\mario-sobel3x3hori-sobel3x3verti.png");
 
-            //Assert
+            //Assert on width/height and pixels
             if (resultImageAfterFilter.Width == resultSavedBitmap.Width && resultImageAfterFilter.Height == resultSavedBitmap.Height)
             {
                 for (int i = 0; i < resultImageAfterFilter.Width; i++)

@@ -38,6 +38,7 @@ namespace ImageEdgeDetection
                 previewBitmap = originalBitmap.CopyToSquareCanvas(picPreview.Width);
                 picPreview.Image = previewBitmap;
 
+                //set groupbox to false when load image except the second one
                 groupBox2.Enabled = true;
                 groupBox3.Enabled = false;
                 groupBox4.Enabled = false;
@@ -74,6 +75,8 @@ namespace ImageEdgeDetection
                     streamWriter.Close();
 
                     picPreview.Image = null;
+
+                    //set groupbox to false: waiting another image
                     groupBox2.Enabled = false;
                     groupBox3.Enabled = false;
                     groupBox4.Enabled = false;
