@@ -148,7 +148,6 @@
             this.listBoxYFilter.Name = "listBoxYFilter";
             this.listBoxYFilter.Size = new System.Drawing.Size(288, 37);
             this.listBoxYFilter.TabIndex = 24;
-            this.listBoxYFilter.SelectedIndexChanged += new System.EventHandler(this.listBoxYFilter_SelectedIndexChanged);
             // 
             // EdgeDetectionButton
             // 
@@ -196,6 +195,7 @@
             this.groupBox1.TabIndex = 35;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "1. Load Image";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // groupBox2
             // 
@@ -208,6 +208,7 @@
             this.groupBox2.TabIndex = 36;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "2. Apply Filter";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // groupBox3
             // 
@@ -224,6 +225,7 @@
             this.groupBox3.TabIndex = 37;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "3. Apply Edge Detection";
+            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // groupBox4
             // 
